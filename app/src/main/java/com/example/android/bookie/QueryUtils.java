@@ -145,11 +145,10 @@ public final class QueryUtils {
                 String title = volumeInfo.getString("title");
                 // Extract the value for the key called "publisher"
                 String publisher;
-                if(volumeInfo.has("publisher")){
-                    publisher=volumeInfo.getString("publisher");
-                }
-                else{
-                    publisher= "Unknown publisher";
+                if (volumeInfo.has("publisher")) {
+                    publisher = volumeInfo.getString("publisher");
+                } else {
+                    publisher = "Unknown publisher";
                 }
                 //Extract the value for the key named "authors"
                 String author;
@@ -182,7 +181,7 @@ public final class QueryUtils {
     }
 
     /**
-     * Query the USGS dataset and return a list of {@link Book} objects.
+     * Query the Google Books dataset and return a list of {@link Book} objects.
      */
     public static List<Book> fetchBookData(String requestUrl) {
         //Pause execution for 2000 milliseconds so we are able to see the loading indicator

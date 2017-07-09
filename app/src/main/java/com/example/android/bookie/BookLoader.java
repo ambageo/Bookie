@@ -14,10 +14,11 @@ public class BookLoader extends AsyncTaskLoader<List<Book>> {
     //Query url
     private String mUrl;
 
-    public BookLoader(Context context, String url){
+    public BookLoader(Context context, String url) {
         super(context);
-        mUrl= url;
+        mUrl = url;
     }
+
     @Override
     protected void onStartLoading() {
         forceLoad();

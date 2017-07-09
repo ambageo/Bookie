@@ -8,4 +8,23 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="textView">
+        <item name="android:padding">16dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">24dp</item>
+    </style>
+
+    <style name="editText">
+        <item name="android:padding">16dp</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_marginLeft">8dp</item>
+    </style>
+
+    <style name="button">
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 </resources>

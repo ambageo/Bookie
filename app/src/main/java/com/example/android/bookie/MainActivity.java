@@ -17,7 +17,7 @@ import static com.example.android.bookie.R.id.query;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String LOG_TAG= MainActivity.class.getName();
+    public static final String LOG_TAG = MainActivity.class.getName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,24 +26,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
 
 
-
-        Button searchButton= (Button) findViewById(R.id.search_button);
-        searchButton.setOnClickListener(new View.OnClickListener(){
+        Button searchButton = (Button) findViewById(R.id.search_button);
+        searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
-                Intent intent= new Intent(MainActivity.this, BookActivity.class);
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BookActivity.class);
                 // Find the EditText and get the string the user inserts for the query.
-                EditText queryText= (EditText) findViewById(R.id.query);
-                String query= queryText.getText().toString();
-                query= query.replace(" ", "");
+                EditText queryText = (EditText) findViewById(R.id.query);
+                String query = queryText.getText().toString();
+                //Ignore space because we can't have space in query
+                query = query.replace(" ", "");
+                //This code allows us to make the query available when launching the intent
                 intent.putExtra("User query", query);
                 startActivity(intent);
-                Log.v(LOG_TAG, "Query inserted by the user is: " +query);
+                Log.v(LOG_TAG, "Query inserted by the user is: " + query);
             }
         });
     }
-
-
 
 
 }
