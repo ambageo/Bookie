@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:padding="8dp"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:hint="Title"/>
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:padding="8dp"
+            android:textSize="24dp"
+            android:hint="author"/>
+
+        <TextView
+            android:id="@+id/publisher"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:padding="8dp"
+            android:hint="publisher"/>
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:padding="8dp"
+            android:textStyle="italic"
+            android:hint="category"/>
+
+    </GridLayout>
+
+</LinearLayout>

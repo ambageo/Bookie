@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Bookie</string>
+    <string name="no_connection">No internet connection</string>
+    <string name="welcome_message">Hi, I\'\m  Bookie! Let me help you find the book that you are interested in!</string>
+</resources>
