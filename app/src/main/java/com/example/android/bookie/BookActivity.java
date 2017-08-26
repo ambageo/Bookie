@@ -29,7 +29,7 @@ import static com.example.android.bookie.R.id.query;
 public class BookActivity extends AppCompatActivity
         implements LoaderCallbacks<List<Book>> {
 
-    String userQuery;
+    private String userQuery;
     private BookAdapter bAdapter;
     /**
      * TextView that is displayed when the list is empty

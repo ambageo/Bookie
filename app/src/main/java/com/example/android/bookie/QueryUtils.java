@@ -29,6 +29,9 @@ import static com.example.android.bookie.BookActivity.LOG_TAG;
  */
 public final class QueryUtils {
 
+    private static final int READ_TIMEOUT=10000;
+    private static final int CONNECT_TIMEOUT= 15000;
+
     /**
      * Create a private constructor because no one should ever create a {@link QueryUtils} object.
      * This class is only meant to hold static variables and methods, which can be accessed
@@ -64,8 +67,8 @@ public final class QueryUtils {
 
         try {
             urlConnection = (HttpURLConnection) url.openConnection();
-            urlConnection.setReadTimeout(10000 /* milliseconds */);
-            urlConnection.setConnectTimeout(15000 /* milliseconds */);
+            urlConnection.setReadTimeout(READ_TIMEOUT /* milliseconds */);
+            urlConnection.setConnectTimeout(CONNECT_TIMEOUT /* milliseconds */);
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
 
@@ -78,7 +81,7 @@ public final class QueryUtils {
                 Log.e(LOG_TAG, "Error response code: " + urlConnection.getResponseCode());
             }
         } catch (IOException e) {
-            Log.e(LOG_TAG, "Problem retrieving the earthquake results", e);
+            Log.e(LOG_TAG, "Problem retrieving the book results", e);
         } finally {
             if (urlConnection != null) {
                 urlConnection.disconnect();
@@ -201,7 +204,7 @@ public final class QueryUtils {
             Log.e(LOG_TAG, "Problem making the HTTP request.", e);
         }
 
-        // Extract relevant fields from the JSON response and create a list of {@link Earthquake}s
+        // Extract relevant fields from the JSON response and create a list of {@link Book}s
         List<Book> books = extractFeatureFromJson(jsonResponse);
 
         // Return the list of {@link Book}
